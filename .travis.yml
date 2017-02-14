@@ -22,8 +22,9 @@ install:
 
   # Replace dep1 dep2 ... with your dependencies
   - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-      conda create -n jwstb7 --file http://ssb.stsci.edu/conda/jwstdp-0.7.0rc/jwstdp-0.7.7-linux-py27.0.txt
+      conda create -n jwstb7 --file http://ssb.stsci.edu/conda/jwstdp-0.7.0rc/jwstdp-0.7.7-linux-py27.0.txt;
     else
-      conda create -n jwstb7 --file http://ssb.stsci.edu/conda/jwstdp-0.7.0rc/jwstdp-0.7.7-linux-py35.0.txt
+      conda create -n jwstb7 --file http://ssb.stsci.edu/conda/jwstdp-0.7.0rc/jwstdp-0.7.7-linux-py35.0.txt;
+    fi
   - source activate jwstb7
   - py.test
